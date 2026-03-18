@@ -6,7 +6,7 @@ const scrollToForm = () => {
 };
 
 const HeroSection = () => (
-  <section className="relative min-h-screen flex items-center overflow-hidden">
+  <section id="hero" className="relative min-h-screen flex items-center overflow-hidden pt-16">
     {/* Mesh gradient background */}
     <div className="absolute inset-0 mesh-bg" />
     <div className="absolute inset-0 dots-bg opacity-30" />

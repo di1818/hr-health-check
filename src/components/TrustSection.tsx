@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import dmitryPhoto from "@/assets/dmitry-bannikov.jpg";
 
 const TrustSection = () => (
-  <section className="relative py-24 sm:py-32 section-divider overflow-hidden">
+  <section id="trust" className="relative py-24 sm:py-32 section-divider overflow-hidden">
     <div className="absolute inset-0 mesh-bg" />
     <div className="section-container relative">
       <motion.div

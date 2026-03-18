@@ -11,7 +11,7 @@ const benefits = [
 ];
 
 const BenefitsSection = () => (
-  <section className="relative py-24 sm:py-32 section-divider">
+  <section id="benefits" className="relative py-24 sm:py-32 section-divider">
     <div className="absolute inset-0 dots-bg opacity-20" />
     <div className="section-container relative">
       <motion.div

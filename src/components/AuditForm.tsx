@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { toast } from "sonner";
+import { Checkbox } from "@/components/ui/checkbox";
 
 const AuditForm = () => {
   const [form, setForm] = useState({
@@ -13,6 +14,8 @@ const AuditForm = () => {
     problem: "",
   });
   const [loading, setLoading] = useState(false);
+  const [consentData, setConsentData] = useState(false);
+  const [consentAds, setConsentAds] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -24,11 +27,17 @@ const AuditForm = () => {
       toast.error("Заполните имя и телефон");
       return;
     }
+    if (!consentData) {
+      toast.error("Необходимо дать согласие на обработку персональных данных");
+      return;
+    }
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
       toast.success("Заявка отправлена! Мы свяжемся с вами в ближайшее время.");
       setForm({ name: "", phone: "", telegram: "", company: "", position: "", employees: "", problem: "" });
+      setConsentData(false);
+      setConsentAds(false);
     }, 1200);
   };
 
@@ -91,9 +100,40 @@ const AuditForm = () => {
           >
             {loading ? "Отправка..." : "Записаться на бесплатный аудит"}
           </button>
-          <p className="text-xs text-muted-foreground text-center mt-5">
-            Нажимая кнопку, вы соглашаетесь с обработкой персональных данных
-          </p>
+          <div className="space-y-3 mt-6">
+            <label className="flex items-start gap-3 cursor-pointer group">
+              <Checkbox
+                checked={consentData}
+                onCheckedChange={(v) => setConsentData(v === true)}
+                className="mt-0.5 border-border/60 data-[state=checked]:bg-primary data-[state=checked]:border-primary"
+              />
+              <span className="text-xs text-muted-foreground leading-relaxed">
+                Я даю{" "}
+                <a href="https://hr-inst.ru/docs/personal-consent.html" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  согласие на обработку персональных данных
+                </a>{" "}
+                в соответствии с{" "}
+                <a href="https://hr-inst.ru/docs/privacy.html" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  политикой обработки персональных данных
+                </a>{" "}
+                *
+              </span>
+            </label>
+
+            <label className="flex items-start gap-3 cursor-pointer group">
+              <Checkbox
+                checked={consentAds}
+                onCheckedChange={(v) => setConsentAds(v === true)}
+                className="mt-0.5 border-border/60 data-[state=checked]:bg-primary data-[state=checked]:border-primary"
+              />
+              <span className="text-xs text-muted-foreground leading-relaxed">
+                Я даю{" "}
+                <a href="https://hr-inst.ru/docs/marketing-consent.html" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  согласие на получение рекламных материалов
+                </a>
+              </span>
+            </label>
+          </div>
         </motion.form>
       </div>
     </section>
