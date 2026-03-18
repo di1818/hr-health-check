@@ -14,7 +14,7 @@ import AuditForm from "@/components/AuditForm";
 const Index = () => {
   return (
     <main className="bg-background min-h-screen relative">
-      <FloatingPhotos />
+      <AmbientBackground />
       <Navbar />
       <HeroSection />
       <BenefitsSection />
