@@ -8,7 +8,7 @@ import AfterAuditSection from "@/components/AfterAuditSection";
 import TrustSection from "@/components/TrustSection";
 import FAQSection from "@/components/FAQSection";
 import AuditForm from "@/components/AuditForm";
-import FinalCTA from "@/components/FinalCTA";
+
 
 const Index = () => {
   return (
@@ -22,7 +22,7 @@ const Index = () => {
       <AfterAuditSection />
       <TrustSection />
       <FAQSection />
-      <FinalCTA />
+      
       <AuditForm />
       <footer className="py-8 border-t border-border text-center text-sm text-muted-foreground">
         <div className="section-container">

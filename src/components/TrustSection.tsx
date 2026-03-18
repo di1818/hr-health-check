@@ -8,27 +8,36 @@ const TrustSection = () => (
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="flex flex-col md:flex-row gap-10 items-center max-w-4xl mx-auto"
+        className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center"
       >
-        <div className="flex-shrink-0">
+        <div className="flex justify-center md:justify-end">
           <img
             src={dmitryPhoto}
             alt="Дмитрий Банников — HR-эксперт"
-            className="w-48 h-48 sm:w-56 sm:h-56 rounded-2xl object-cover object-top border border-border"
+            className="w-full max-w-md aspect-[3/4] rounded-2xl object-cover object-top border border-border"
           />
         </div>
         <div>
-          <h2 className="text-3xl font-display font-bold text-foreground mb-4">
+          <h2 className="text-4xl sm:text-5xl font-display font-bold text-foreground mb-6">
             Дмитрий Банников
           </h2>
-          <p className="text-muted-foreground leading-relaxed mb-4">
-            Эксперт по построению HR-систем. Автор курса «HR Инструментарий». 
+          <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+            Эксперт по построению HR-систем. Автор курса «HR Инструментарий».
             Помог десяткам компаний выстроить найм, адаптацию, мотивацию и удержание сотрудников.
           </p>
-          <p className="text-muted-foreground leading-relaxed">
-            Провожу аудит лично. Мне важно, чтобы вы получили честную картину — 
+          <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+            Провожу аудит лично. Мне важно, чтобы вы получили честную картину —
             а не очередной «продающий вебинар».
           </p>
+          <div className="border-l-4 border-primary pl-6">
+            <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-2">
+              Миссия
+            </p>
+            <p className="text-foreground text-lg leading-relaxed">
+              Повышать качество HR в России через практический системный подход,
+              который помогает бизнесу расти, удерживать сильных людей и снижать управленческий хаос.
+            </p>
+          </div>
         </div>
       </motion.div>
     </div>
