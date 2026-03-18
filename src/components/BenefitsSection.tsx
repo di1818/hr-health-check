@@ -13,7 +13,6 @@ const benefits = [
 const BenefitsSection = () => (
   <section id="benefits" className="relative py-24 sm:py-32 section-divider">
     <div className="section-container relative">
-    <div className="section-container relative">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
