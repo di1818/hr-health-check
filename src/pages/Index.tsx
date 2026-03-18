@@ -8,10 +8,12 @@ import AfterAuditSection from "@/components/AfterAuditSection";
 import TrustSection from "@/components/TrustSection";
 import FAQSection from "@/components/FAQSection";
 import AuditForm from "@/components/AuditForm";
+import PhotoBackground from "@/components/PhotoBackground";
 
 const Index = () => {
   return (
     <main className="page-wrapper bg-background min-h-screen">
+      <PhotoBackground />
       <HeroSection />
       <BenefitsSection />
       <AudienceSection />
