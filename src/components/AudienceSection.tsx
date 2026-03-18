@@ -9,15 +9,17 @@ const audiences = [
 ];
 
 const AudienceSection = () => (
-  <section className="py-20 sm:py-28 border-t border-border">
-    <div className="section-container">
+  <section className="relative py-24 sm:py-32 section-divider overflow-hidden">
+    <div className="absolute inset-0 mesh-bg" />
+    <div className="section-container relative">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-center mb-14"
+        className="text-center mb-16"
       >
-        <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-4">
+        <span className="badge-pill mb-6">Для кого</span>
+        <h2 className="text-3xl sm:text-5xl font-display font-bold text-foreground mb-4 tracking-tight">
           Кому подходит аудит
         </h2>
       </motion.div>
@@ -30,12 +32,14 @@ const AudienceSection = () => (
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: i * 0.1 }}
-            className="card-glass p-6 flex gap-4 items-start glow-hover"
+            className="card-glass p-7 flex gap-5 items-start glow-hover group"
           >
-            <a.icon className="w-7 h-7 text-primary flex-shrink-0 mt-0.5" />
+            <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
+              <a.icon className="w-6 h-6 text-primary" />
+            </div>
             <div>
-              <h3 className="font-semibold text-foreground font-body mb-1">{a.title}</h3>
-              <p className="text-sm text-muted-foreground">{a.desc}</p>
+              <h3 className="font-semibold text-foreground font-display mb-1 tracking-tight">{a.title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">{a.desc}</p>
             </div>
           </motion.div>
         ))}

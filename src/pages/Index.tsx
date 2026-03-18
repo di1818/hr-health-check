@@ -9,7 +9,6 @@ import TrustSection from "@/components/TrustSection";
 import FAQSection from "@/components/FAQSection";
 import AuditForm from "@/components/AuditForm";
 
-
 const Index = () => {
   return (
     <main className="bg-background min-h-screen">
@@ -22,9 +21,8 @@ const Index = () => {
       <AfterAuditSection />
       <TrustSection />
       <FAQSection />
-      
       <AuditForm />
-      <footer className="py-8 border-t border-border text-center text-sm text-muted-foreground">
+      <footer className="py-10 section-divider text-center text-sm text-muted-foreground">
         <div className="section-container">
           © {new Date().getFullYear()} HR Инструментарий · Дмитрий Банников
         </div>

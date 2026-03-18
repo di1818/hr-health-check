@@ -41,18 +41,18 @@ const CountdownTimer = () => {
 
   return (
     <div className="flex gap-3 sm:gap-4">
-      {units.map((u) => (
+      {units.map((u, i) => (
         <motion.div
           key={u.label}
-          className="card-glass px-3 py-2 sm:px-5 sm:py-3 text-center min-w-[60px] sm:min-w-[80px]"
+          className="relative group card-glass px-4 py-3 sm:px-6 sm:py-4 text-center min-w-[70px] sm:min-w-[90px]"
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.4 }}
+          transition={{ duration: 0.4, delay: i * 0.08 }}
         >
-          <div className="text-2xl sm:text-3xl font-bold text-foreground font-body">
+          <div className="text-2xl sm:text-4xl font-bold text-foreground font-display tracking-tight">
             {String(u.value).padStart(2, "0")}
           </div>
-          <div className="text-xs text-muted-foreground mt-1">{u.label}</div>
+          <div className="text-[10px] sm:text-xs text-muted-foreground mt-1 uppercase tracking-wider">{u.label}</div>
         </motion.div>
       ))}
     </div>

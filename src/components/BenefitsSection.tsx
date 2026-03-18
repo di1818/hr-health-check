@@ -11,19 +11,21 @@ const benefits = [
 ];
 
 const BenefitsSection = () => (
-  <section className="py-20 sm:py-28">
-    <div className="section-container">
+  <section className="relative py-24 sm:py-32 section-divider">
+    <div className="absolute inset-0 dots-bg opacity-20" />
+    <div className="section-container relative">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="text-center mb-14"
+        className="text-center mb-16"
       >
-        <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-4">
+        <span className="badge-pill mb-6">Что входит</span>
+        <h2 className="text-3xl sm:text-5xl font-display font-bold text-foreground mb-5 tracking-tight">
           Что вы получите
         </h2>
-        <p className="text-muted-foreground max-w-xl mx-auto">
+        <p className="text-muted-foreground max-w-xl mx-auto text-lg">
           Полная картина HR-ситуации вашей компании — бесплатно и без обязательств
         </p>
       </motion.div>
@@ -36,10 +38,12 @@ const BenefitsSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: i * 0.08 }}
-            className="card-glass p-6 glow-hover"
+            className="card-glass p-7 glow-hover group"
           >
-            <b.icon className="w-8 h-8 text-primary mb-4" />
-            <h3 className="text-lg font-semibold text-foreground font-body mb-2">{b.title}</h3>
+            <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
+              <b.icon className="w-6 h-6 text-primary" />
+            </div>
+            <h3 className="text-lg font-semibold text-foreground font-display mb-2 tracking-tight">{b.title}</h3>
             <p className="text-sm text-muted-foreground leading-relaxed">{b.desc}</p>
           </motion.div>
         ))}

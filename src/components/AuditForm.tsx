@@ -33,21 +33,23 @@ const AuditForm = () => {
   };
 
   const inputClass =
-    "w-full px-4 py-3 rounded-xl bg-secondary border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition text-sm";
+    "w-full px-5 py-3.5 rounded-xl bg-secondary/60 border border-border/50 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary/30 transition-all text-sm font-body";
 
   return (
-    <section id="audit-form" className="py-20 sm:py-28 border-t border-border">
-      <div className="section-container">
+    <section id="audit-form" className="relative py-24 sm:py-32 section-divider overflow-hidden">
+      <div className="absolute inset-0 mesh-bg" />
+      <div className="section-container relative">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-14"
         >
-          <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-4">
+          <span className="badge-pill mb-6">Заявка</span>
+          <h2 className="text-3xl sm:text-5xl font-display font-bold text-foreground mb-5 tracking-tight">
             Записаться на бесплатный аудит
           </h2>
-          <p className="text-muted-foreground max-w-xl mx-auto">
+          <p className="text-muted-foreground max-w-xl mx-auto text-lg">
             Заполните форму — мы свяжемся в течение 24 часов
           </p>
         </motion.div>
@@ -57,8 +59,9 @@ const AuditForm = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="card-glass p-6 sm:p-10 max-w-2xl mx-auto"
+          className="card-glass p-8 sm:p-12 max-w-2xl mx-auto relative"
         >
+          <div className="absolute -inset-1 rounded-2xl bg-primary/3 blur-2xl -z-10" />
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
             <input name="name" value={form.name} onChange={handleChange} placeholder="Имя *" className={inputClass} />
             <input name="phone" value={form.phone} onChange={handleChange} placeholder="Телефон *" className={inputClass} />
@@ -84,11 +87,11 @@ const AuditForm = () => {
           <button
             type="submit"
             disabled={loading}
-            className="w-full py-4 rounded-xl bg-primary text-primary-foreground font-semibold text-lg hover:opacity-90 transition-opacity disabled:opacity-50 glow-hover"
+            className="w-full py-4 rounded-2xl bg-primary text-primary-foreground font-semibold text-lg transition-all duration-300 hover:shadow-[0_0_40px_hsl(38_92%_55%/0.3)] hover:scale-[1.01] disabled:opacity-50 active:scale-[0.99]"
           >
             {loading ? "Отправка..." : "Записаться на бесплатный аудит"}
           </button>
-          <p className="text-xs text-muted-foreground text-center mt-4">
+          <p className="text-xs text-muted-foreground text-center mt-5">
             Нажимая кнопку, вы соглашаетесь с обработкой персональных данных
           </p>
         </motion.form>

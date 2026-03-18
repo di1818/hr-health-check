@@ -12,18 +12,20 @@ const problems = [
 ];
 
 const ProblemsSection = () => (
-  <section className="py-20 sm:py-28 border-t border-border">
-    <div className="section-container">
+  <section className="relative py-24 sm:py-32 section-divider">
+    <div className="absolute inset-0 dots-bg opacity-15" />
+    <div className="section-container relative">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-center mb-14"
+        className="text-center mb-16"
       >
-        <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-4">
+        <span className="badge-pill mb-6">Проблемы</span>
+        <h2 className="text-3xl sm:text-5xl font-display font-bold text-foreground mb-5 tracking-tight">
           Какие проблемы аудит помогает увидеть
         </h2>
-        <p className="text-muted-foreground max-w-xl mx-auto">
+        <p className="text-muted-foreground max-w-xl mx-auto text-lg">
           Если узнаёте хотя бы 2 пункта — аудит для вас
         </p>
       </motion.div>
@@ -36,10 +38,10 @@ const ProblemsSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.05 }}
-            className="flex items-start gap-3 p-4 rounded-xl bg-secondary/50"
+            className="flex items-start gap-4 p-5 rounded-2xl bg-secondary/40 border border-border/30 hover:border-primary/20 transition-colors"
           >
-            <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0 mt-2" />
-            <p className="text-sm text-foreground/90">{p}</p>
+            <span className="w-2.5 h-2.5 rounded-full bg-primary flex-shrink-0 mt-1.5" />
+            <p className="text-sm text-foreground/85 leading-relaxed">{p}</p>
           </motion.div>
         ))}
       </div>
