@@ -34,7 +34,6 @@ const FAQSection = () => {
 
   return (
     <section id="faq" className="relative py-24 sm:py-32 section-divider">
-      <div className="absolute inset-0 dots-bg opacity-15" />
       <div className="section-container relative">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
