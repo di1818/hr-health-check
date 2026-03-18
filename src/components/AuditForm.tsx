@@ -27,6 +27,10 @@ const AuditForm = () => {
       toast.error("Заполните имя и телефон");
       return;
     }
+    if (!consentData) {
+      toast.error("Необходимо дать согласие на обработку персональных данных");
+      return;
+    }
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
