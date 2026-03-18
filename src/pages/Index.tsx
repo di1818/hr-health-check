@@ -1,13 +1,35 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import HeroSection from "@/components/HeroSection";
+import BenefitsSection from "@/components/BenefitsSection";
+import AudienceSection from "@/components/AudienceSection";
+import ProblemsSection from "@/components/ProblemsSection";
+import StepsSection from "@/components/StepsSection";
+import WhyFreeSection from "@/components/WhyFreeSection";
+import AfterAuditSection from "@/components/AfterAuditSection";
+import TrustSection from "@/components/TrustSection";
+import FAQSection from "@/components/FAQSection";
+import AuditForm from "@/components/AuditForm";
+import FinalCTA from "@/components/FinalCTA";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <main className="bg-background min-h-screen">
+      <HeroSection />
+      <BenefitsSection />
+      <AudienceSection />
+      <ProblemsSection />
+      <StepsSection />
+      <WhyFreeSection />
+      <AfterAuditSection />
+      <TrustSection />
+      <FAQSection />
+      <FinalCTA />
+      <AuditForm />
+      <footer className="py-8 border-t border-border text-center text-sm text-muted-foreground">
+        <div className="section-container">
+          © {new Date().getFullYear()} HR Инструментарий · Дмитрий Банников
+        </div>
+      </footer>
+    </main>
   );
 };
 
