@@ -24,9 +24,13 @@ const Index = () => {
       <TrustSection />
       <FAQSection />
       <AuditForm />
-      <footer className="py-10 section-divider text-center text-sm text-muted-foreground">
-        <div className="section-container">
-          © {new Date().getFullYear()} HR Инструментарий · Дмитрий Банников
+      <footer className="py-12 section-divider text-sm text-muted-foreground">
+        <div className="section-container flex flex-col sm:flex-row items-center justify-between gap-4">
+          <span>© {new Date().getFullYear()} HR Инструментарий · Дмитрий Банников</span>
+          <div className="flex items-center gap-6">
+            <a href="tel:+79871837315" className="hover:text-foreground transition-colors">+7 (987) 183-73-15</a>
+            <a href="https://t.me/test66_tts_bot" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">Telegram</a>
+          </div>
         </div>
       </footer>
     </main>

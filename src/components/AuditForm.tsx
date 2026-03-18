@@ -100,9 +100,40 @@ const AuditForm = () => {
           >
             {loading ? "Отправка..." : "Записаться на бесплатный аудит"}
           </button>
-          <p className="text-xs text-muted-foreground text-center mt-5">
-            Нажимая кнопку, вы соглашаетесь с обработкой персональных данных
-          </p>
+          <div className="space-y-3 mt-6">
+            <label className="flex items-start gap-3 cursor-pointer group">
+              <Checkbox
+                checked={consentData}
+                onCheckedChange={(v) => setConsentData(v === true)}
+                className="mt-0.5 border-border/60 data-[state=checked]:bg-primary data-[state=checked]:border-primary"
+              />
+              <span className="text-xs text-muted-foreground leading-relaxed">
+                Я даю{" "}
+                <a href="https://hr-inst.ru/docs/personal-consent.html" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  согласие на обработку персональных данных
+                </a>{" "}
+                в соответствии с{" "}
+                <a href="https://hr-inst.ru/docs/privacy.html" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  политикой обработки персональных данных
+                </a>{" "}
+                *
+              </span>
+            </label>
+
+            <label className="flex items-start gap-3 cursor-pointer group">
+              <Checkbox
+                checked={consentAds}
+                onCheckedChange={(v) => setConsentAds(v === true)}
+                className="mt-0.5 border-border/60 data-[state=checked]:bg-primary data-[state=checked]:border-primary"
+              />
+              <span className="text-xs text-muted-foreground leading-relaxed">
+                Я даю{" "}
+                <a href="https://hr-inst.ru/docs/marketing-consent.html" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  согласие на получение рекламных материалов
+                </a>
+              </span>
+            </label>
+          </div>
         </motion.form>
       </div>
     </section>
