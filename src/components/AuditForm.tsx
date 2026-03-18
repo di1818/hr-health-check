@@ -128,9 +128,9 @@ const AuditForm = () => {
               />
               <span className="text-xs text-muted-foreground leading-relaxed">
                 Я даю{" "}
-                 <a href="/docs/marketing-consent.pdf" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                 <Link to="/docs/marketing-consent" target="_blank" className="text-primary hover:underline">
                    согласие на получение рекламных материалов
-                 </a>
+                 </Link>
               </span>
             </label>
           </div>
