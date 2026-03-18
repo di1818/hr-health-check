@@ -6,15 +6,7 @@ const scrollToForm = () => {
 };
 
 const HeroSection = () => (
-  <section id="hero" className="relative min-h-screen flex items-center overflow-hidden pt-16">
-    {/* Mesh gradient background */}
-    <div className="absolute inset-0 mesh-bg" />
-    <div className="absolute inset-0 dots-bg opacity-30" />
-    
-    {/* Decorative orbs */}
-    <div className="absolute top-20 right-[15%] w-72 h-72 rounded-full bg-primary/5 blur-[100px] animate-float" />
-    <div className="absolute bottom-32 left-[10%] w-96 h-96 rounded-full bg-primary/3 blur-[120px]" />
-    
+<section id="hero" className="relative min-h-screen flex items-center overflow-hidden pt-16">
     <div className="section-container relative z-10 py-24 sm:py-36">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
