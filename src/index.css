@@ -105,16 +105,6 @@
     background-image: radial-gradient(hsl(220 15% 18%) 1px, transparent 1px);
     background-size: 24px 24px;
   }
-}
-
-@keyframes floatPhoto {
-  0% {
-    transform: translate(0, 0) rotate(var(--rotation, 0deg));
-  }
-  100% {
-    transform: translate(var(--tx, 50vw), var(--ty, 50vh)) rotate(var(--rotation, 0deg));
-  }
-}
 
   .badge-pill {
     @apply inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-medium;
