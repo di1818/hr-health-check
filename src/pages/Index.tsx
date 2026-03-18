@@ -8,7 +8,7 @@ import AfterAuditSection from "@/components/AfterAuditSection";
 import TrustSection from "@/components/TrustSection";
 import FAQSection from "@/components/FAQSection";
 import AuditForm from "@/components/AuditForm";
-import FinalCTA from "@/components/FinalCTA";
+
 
 const Index = () => {
   return (
