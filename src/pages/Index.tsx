@@ -13,6 +13,7 @@ import AuditForm from "@/components/AuditForm";
 const Index = () => {
   return (
     <main className="bg-background min-h-screen">
+      <Navbar />
       <HeroSection />
       <BenefitsSection />
       <AudienceSection />
