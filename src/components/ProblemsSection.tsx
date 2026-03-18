@@ -12,9 +12,8 @@ const problems = [
 ];
 
 const ProblemsSection = () => (
-  <section className="relative py-24 sm:py-32 section-divider">
-    <div className="absolute inset-0 dots-bg opacity-15" />
-    <div className="section-container relative">
+  <section className="section-alt py-24 sm:py-32 section-divider">
+    <div className="section-container">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
