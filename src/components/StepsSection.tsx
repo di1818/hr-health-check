@@ -10,18 +10,20 @@ const steps = [
 ];
 
 const StepsSection = () => (
-  <section className="py-20 sm:py-28 border-t border-border">
-    <div className="section-container">
+  <section className="relative py-24 sm:py-32 section-divider overflow-hidden">
+    <div className="absolute inset-0 mesh-bg" />
+    <div className="section-container relative">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-center mb-14"
+        className="text-center mb-16"
       >
-        <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-4">
+        <span className="badge-pill mb-6">Процесс</span>
+        <h2 className="text-3xl sm:text-5xl font-display font-bold text-foreground mb-5 tracking-tight">
           Как проходит аудит
         </h2>
-        <p className="text-muted-foreground">6 простых шагов — от заявки до результата</p>
+        <p className="text-muted-foreground text-lg">6 простых шагов — от заявки до результата</p>
       </motion.div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -32,14 +34,17 @@ const StepsSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.08 }}
-            className="card-glass p-6 relative overflow-hidden"
+            className="card-glass p-7 relative overflow-hidden glow-hover group"
           >
-            <span className="absolute top-4 right-5 text-5xl font-bold text-primary/10 font-body">
+            <span className="absolute top-4 right-5 text-6xl font-bold text-primary/8 font-display">
               {s.num}
             </span>
             <div className="relative">
-              <h3 className="text-lg font-semibold text-foreground font-body mb-2">{s.title}</h3>
-              <p className="text-sm text-muted-foreground">{s.desc}</p>
+              <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center mb-4 text-sm font-bold text-primary font-display group-hover:bg-primary/20 transition-colors">
+                {s.num}
+              </div>
+              <h3 className="text-lg font-semibold text-foreground font-display mb-2 tracking-tight">{s.title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
             </div>
           </motion.div>
         ))}

@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
@@ -33,15 +33,17 @@ const FAQSection = () => {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section className="py-20 sm:py-28 border-t border-border">
-      <div className="section-container">
+    <section className="relative py-24 sm:py-32 section-divider">
+      <div className="absolute inset-0 dots-bg opacity-15" />
+      <div className="section-container relative">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-14"
+          className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-4">
+          <span className="badge-pill mb-6">FAQ</span>
+          <h2 className="text-3xl sm:text-5xl font-display font-bold text-foreground mb-4 tracking-tight">
             Частые вопросы
           </h2>
         </motion.div>
@@ -58,20 +60,30 @@ const FAQSection = () => {
             >
               <button
                 onClick={() => setOpen(open === i ? null : i)}
-                className="w-full flex items-center justify-between p-5 text-left"
+                className="w-full flex items-center justify-between p-6 text-left group"
               >
-                <span className="font-medium text-foreground pr-4">{f.q}</span>
+                <span className="font-medium text-foreground pr-4 font-display tracking-tight">{f.q}</span>
                 <ChevronDown
-                  className={`w-5 h-5 text-muted-foreground flex-shrink-0 transition-transform ${
-                    open === i ? "rotate-180" : ""
+                  className={`w-5 h-5 text-muted-foreground flex-shrink-0 transition-transform duration-300 ${
+                    open === i ? "rotate-180 text-primary" : ""
                   }`}
                 />
               </button>
-              {open === i && (
-                <div className="px-5 pb-5 text-sm text-muted-foreground">
-                  {f.a}
-                </div>
-              )}
+              <AnimatePresence>
+                {open === i && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="overflow-hidden"
+                  >
+                    <div className="px-6 pb-6 text-sm text-muted-foreground leading-relaxed">
+                      {f.a}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </motion.div>
           ))}
         </div>
