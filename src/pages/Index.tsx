@@ -27,11 +27,27 @@ const Index = () => {
       <FAQSection />
       <AuditForm />
       <footer className="py-12 section-divider text-sm text-muted-foreground">
-        <div className="section-container flex flex-col sm:flex-row items-center justify-between gap-4">
-          <span>© {new Date().getFullYear()} HR Инструментарий · Дмитрий Банников</span>
-          <div className="flex items-center gap-6">
-            <a href="tel:+79871837315" className="hover:text-foreground transition-colors">+7 (987) 183-73-15</a>
-            <a href="https://t.me/test66_tts_bot" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">Telegram</a>
+        <div className="section-container flex flex-col gap-6">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <span>© {new Date().getFullYear()} HR Инструментарий · Дмитрий Банников</span>
+            <div className="flex items-center gap-6">
+              <a href="tel:+79871837315" className="hover:text-foreground transition-colors">+7 (987) 183-73-15</a>
+              <a href="https://t.me/test66_tts_bot" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">Telegram</a>
+            </div>
+          </div>
+          <div className="flex flex-wrap gap-x-6 gap-y-3 text-xs sm:text-sm">
+            <a href="/docs/personal-consent" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
+              Согласие на обработку персональных данных
+            </a>
+            <a href="/docs/privacy" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
+              Политика обработки персональных данных
+            </a>
+            <a href="/docs/marketing-consent" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
+              Согласие на получение рекламных материалов
+            </a>
+            <a href="/docs/distribution-consent" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
+              Согласие на распространение персональных данных
+            </a>
           </div>
         </div>
       </footer>
