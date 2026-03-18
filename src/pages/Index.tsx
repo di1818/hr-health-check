@@ -22,7 +22,7 @@ const Index = () => {
       <AfterAuditSection />
       <TrustSection />
       <FAQSection />
-      <FinalCTA />
+      
       <AuditForm />
       <footer className="py-8 border-t border-border text-center text-sm text-muted-foreground">
         <div className="section-container">
