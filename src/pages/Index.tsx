@@ -1,3 +1,4 @@
+import FloatingPhotos from "@/components/FloatingPhotos";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import BenefitsSection from "@/components/BenefitsSection";
@@ -12,7 +13,8 @@ import AuditForm from "@/components/AuditForm";
 
 const Index = () => {
   return (
-    <main className="bg-background min-h-screen">
+    <main className="bg-background min-h-screen relative">
+      <FloatingPhotos />
       <Navbar />
       <HeroSection />
       <BenefitsSection />
