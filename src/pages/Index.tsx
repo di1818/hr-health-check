@@ -1,4 +1,4 @@
-import FloatingPhotos from "@/components/FloatingPhotos";
+import AmbientBackground from "@/components/AmbientBackground";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import BenefitsSection from "@/components/BenefitsSection";
