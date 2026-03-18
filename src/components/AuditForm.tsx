@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { toast } from "sonner";
 import { Checkbox } from "@/components/ui/checkbox";
+import { Link } from "react-router-dom";
 
 const AuditForm = () => {
   const [form, setForm] = useState({
@@ -108,13 +109,13 @@ const AuditForm = () => {
               />
               <span className="text-xs text-muted-foreground leading-relaxed">
                 Я даю{" "}
-                 <a href="/docs/personal-consent.pdf" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                 <Link to="/docs/personal-consent" target="_blank" className="text-primary hover:underline">
                    согласие на обработку персональных данных
-                 </a>{" "}
+                 </Link>{" "}
                  в соответствии с{" "}
-                 <a href="/docs/privacy.pdf" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                 <Link to="/docs/privacy" target="_blank" className="text-primary hover:underline">
                    политикой обработки персональных данных
-                 </a>{" "}
+                 </Link>{" "}
                 *
               </span>
             </label>
@@ -127,9 +128,9 @@ const AuditForm = () => {
               />
               <span className="text-xs text-muted-foreground leading-relaxed">
                 Я даю{" "}
-                 <a href="/docs/marketing-consent.pdf" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                 <Link to="/docs/marketing-consent" target="_blank" className="text-primary hover:underline">
                    согласие на получение рекламных материалов
-                 </a>
+                 </Link>
               </span>
             </label>
           </div>
