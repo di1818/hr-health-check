@@ -108,13 +108,13 @@ const AuditForm = () => {
               />
               <span className="text-xs text-muted-foreground leading-relaxed">
                 Я даю{" "}
-                <a href="https://hr-inst.ru/docs/personal-consent.html" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                  согласие на обработку персональных данных
-                </a>{" "}
-                в соответствии с{" "}
-                <a href="https://hr-inst.ru/docs/privacy.html" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                  политикой обработки персональных данных
-                </a>{" "}
+                 <a href="/docs/personal-consent.pdf" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                   согласие на обработку персональных данных
+                 </a>{" "}
+                 в соответствии с{" "}
+                 <a href="/docs/privacy.pdf" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                   политикой обработки персональных данных
+                 </a>{" "}
                 *
               </span>
             </label>
