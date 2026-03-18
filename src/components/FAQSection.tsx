@@ -33,7 +33,7 @@ const FAQSection = () => {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section className="relative py-24 sm:py-32 section-divider">
+    <section id="faq" className="relative py-24 sm:py-32 section-divider">
       <div className="absolute inset-0 dots-bg opacity-15" />
       <div className="section-container relative">
         <motion.div

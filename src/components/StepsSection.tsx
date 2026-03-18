@@ -10,7 +10,7 @@ const steps = [
 ];
 
 const StepsSection = () => (
-  <section className="relative py-24 sm:py-32 section-divider overflow-hidden">
+  <section id="steps" className="relative py-24 sm:py-32 section-divider overflow-hidden">
     <div className="absolute inset-0 mesh-bg" />
     <div className="section-container relative">
       <motion.div
