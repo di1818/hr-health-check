@@ -36,6 +36,8 @@ const AuditForm = () => {
       setLoading(false);
       toast.success("Заявка отправлена! Мы свяжемся с вами в ближайшее время.");
       setForm({ name: "", phone: "", telegram: "", company: "", position: "", employees: "", problem: "" });
+      setConsentData(false);
+      setConsentAds(false);
     }, 1200);
   };
 
