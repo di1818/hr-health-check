@@ -14,6 +14,8 @@ const AuditForm = () => {
     problem: "",
   });
   const [loading, setLoading] = useState(false);
+  const [consentData, setConsentData] = useState(false);
+  const [consentAds, setConsentAds] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
