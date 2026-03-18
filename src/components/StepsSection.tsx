@@ -12,7 +12,6 @@ const steps = [
 const StepsSection = () => (
   <section id="steps" className="relative py-24 sm:py-32 section-divider overflow-hidden">
     <div className="section-container relative">
-    <div className="section-container relative">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
