@@ -6,8 +6,16 @@ const scrollToForm = () => {
 };
 
 const HeroSection = () => (
-  <section className="relative min-h-screen flex items-center">
-    <div className="section-container py-24 sm:py-36">
+  <section className="relative min-h-screen flex items-center overflow-hidden">
+    {/* Mesh gradient background */}
+    <div className="absolute inset-0 mesh-bg" />
+    <div className="absolute inset-0 dots-bg opacity-30" />
+    
+    {/* Decorative orbs */}
+    <div className="absolute top-20 right-[15%] w-72 h-72 rounded-full bg-primary/5 blur-[100px] animate-float" />
+    <div className="absolute bottom-32 left-[10%] w-96 h-96 rounded-full bg-primary/3 blur-[120px]" />
+    
+    <div className="section-container relative z-10 py-24 sm:py-36">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
@@ -41,6 +49,7 @@ const HeroSection = () => (
             className="group relative px-8 py-4 rounded-2xl bg-primary text-primary-foreground font-semibold text-lg transition-all duration-300 hover:shadow-[0_0_40px_hsl(38_92%_55%/0.3)] hover:scale-[1.02] active:scale-[0.98]"
           >
             Записаться на бесплатный аудит
+            <span className="absolute inset-0 rounded-2xl bg-primary/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity -z-10" />
           </button>
         </div>
 

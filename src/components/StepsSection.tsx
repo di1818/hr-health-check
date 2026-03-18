@@ -10,8 +10,9 @@ const steps = [
 ];
 
 const StepsSection = () => (
-  <section className="py-24 sm:py-32 section-divider">
-    <div className="section-container">
+  <section className="relative py-24 sm:py-32 section-divider overflow-hidden">
+    <div className="absolute inset-0 mesh-bg" />
+    <div className="section-container relative">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -35,7 +36,7 @@ const StepsSection = () => (
             transition={{ delay: i * 0.08 }}
             className="card-glass p-7 relative overflow-hidden glow-hover group"
           >
-            <span className="absolute top-4 right-5 text-6xl font-bold text-primary/[0.06] font-display">
+            <span className="absolute top-4 right-5 text-6xl font-bold text-primary/8 font-display">
               {s.num}
             </span>
             <div className="relative">

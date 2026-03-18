@@ -2,8 +2,9 @@ import { motion } from "framer-motion";
 import dmitryPhoto from "@/assets/dmitry-bannikov.jpg";
 
 const TrustSection = () => (
-  <section className="section-alt py-24 sm:py-32 section-divider">
-    <div className="section-container">
+  <section className="relative py-24 sm:py-32 section-divider overflow-hidden">
+    <div className="absolute inset-0 mesh-bg" />
+    <div className="section-container relative">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -11,11 +12,14 @@ const TrustSection = () => (
         className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center"
       >
         <div className="flex justify-center md:justify-end">
-          <img
-            src={dmitryPhoto}
-            alt="Дмитрий Банников — HR-эксперт"
-            className="w-full max-w-md aspect-[3/4] rounded-3xl object-cover object-top border border-border/50 shadow-2xl"
-          />
+          <div className="relative">
+            <img
+              src={dmitryPhoto}
+              alt="Дмитрий Банников — HR-эксперт"
+              className="w-full max-w-md aspect-[3/4] rounded-3xl object-cover object-top border border-border/50 shadow-2xl"
+            />
+            <div className="absolute -inset-1 rounded-3xl bg-primary/5 blur-2xl -z-10" />
+          </div>
         </div>
         <div>
           <span className="badge-pill mb-6">Эксперт</span>

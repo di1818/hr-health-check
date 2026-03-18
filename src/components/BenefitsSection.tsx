@@ -11,8 +11,9 @@ const benefits = [
 ];
 
 const BenefitsSection = () => (
-  <section className="section-alt py-24 sm:py-32 section-divider">
-    <div className="section-container">
+  <section className="relative py-24 sm:py-32 section-divider">
+    <div className="absolute inset-0 dots-bg opacity-20" />
+    <div className="section-container relative">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

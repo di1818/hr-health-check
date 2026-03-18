@@ -3,20 +3,39 @@ import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
 const faqs = [
-  { q: "Это действительно бесплатно?", a: "Да. Аудит и консультация полностью бесплатны. Никаких скрытых платежей." },
-  { q: "Сколько времени занимает аудит?", a: "Заполнение анкеты — 15 минут. Консультация по результатам — около 60 минут." },
-  { q: "Будете продавать курс на консультации?", a: "Нет. Мы расскажем о результатах аудита и дадим рекомендации. Если курс вам не подходит — честно скажем." },
-  { q: "Для каких компаний подходит?", a: "Для компаний от 10 до 500+ сотрудников, где есть HR-функция или потребность в ней." },
-  { q: "Что будет после аудита?", a: "Вы получите отчёт и рекомендации. Дальше решаете сами: внедрять самостоятельно, пройти курс или работать с нами." },
-  { q: "Как проходит консультация?", a: "Онлайн, через Zoom или Google Meet. В удобное для вас время." },
+  {
+    q: "Это действительно бесплатно?",
+    a: "Да. Аудит и консультация полностью бесплатны. Никаких скрытых платежей.",
+  },
+  {
+    q: "Сколько времени занимает аудит?",
+    a: "Заполнение анкеты — 15 минут. Консультация по результатам — около 60 минут.",
+  },
+  {
+    q: "Будете продавать курс на консультации?",
+    a: "Нет. Мы расскажем о результатах аудита и дадим рекомендации. Если курс вам не подходит — честно скажем.",
+  },
+  {
+    q: "Для каких компаний подходит?",
+    a: "Для компаний от 10 до 500+ сотрудников, где есть HR-функция или потребность в ней.",
+  },
+  {
+    q: "Что будет после аудита?",
+    a: "Вы получите отчёт и рекомендации. Дальше решаете сами: внедрять самостоятельно, пройти курс или работать с нами.",
+  },
+  {
+    q: "Как проходит консультация?",
+    a: "Онлайн, через Zoom или Google Meet. В удобное для вас время.",
+  },
 ];
 
 const FAQSection = () => {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section className="py-24 sm:py-32 section-divider">
-      <div className="section-container">
+    <section className="relative py-24 sm:py-32 section-divider">
+      <div className="absolute inset-0 dots-bg opacity-15" />
+      <div className="section-container relative">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -41,7 +60,7 @@ const FAQSection = () => {
             >
               <button
                 onClick={() => setOpen(open === i ? null : i)}
-                className="w-full flex items-center justify-between p-6 text-left"
+                className="w-full flex items-center justify-between p-6 text-left group"
               >
                 <span className="font-medium text-foreground pr-4 font-display tracking-tight">{f.q}</span>
                 <ChevronDown
@@ -59,7 +78,9 @@ const FAQSection = () => {
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden"
                   >
-                    <div className="px-6 pb-6 text-sm text-muted-foreground leading-relaxed">{f.a}</div>
+                    <div className="px-6 pb-6 text-sm text-muted-foreground leading-relaxed">
+                      {f.a}
+                    </div>
                   </motion.div>
                 )}
               </AnimatePresence>
