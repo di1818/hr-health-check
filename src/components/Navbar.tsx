@@ -97,7 +97,7 @@ const Navbar = () => {
             <a href="tel:+79871837315" className="text-sm text-muted-foreground flex items-center gap-2">
               <Phone className="w-4 h-4" /> +7 (987) 183-73-15
             </a>
-            <a href="https://t.me/test66_tts_bot" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground flex items-center gap-2">
+            <a href="https://web.telegram.org/k/#@hrinst_bot" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground flex items-center gap-2">
               <Send className="w-4 h-4" /> Написать в Telegram
             </a>
             <button

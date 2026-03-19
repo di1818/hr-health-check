@@ -32,7 +32,7 @@ const Index = () => {
             <span>© {new Date().getFullYear()} HR Инструментарий · Дмитрий Банников</span>
             <div className="flex items-center gap-6">
               <a href="tel:+79871837315" className="hover:text-foreground transition-colors">+7 (987) 183-73-15</a>
-              <a href="https://t.me/test66_tts_bot" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">Telegram</a>
+              <a href="https://web.telegram.org/k/#@hrinst_bot" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">Telegram</a>
             </div>
           </div>
           <div className="flex flex-wrap gap-x-6 gap-y-3 text-xs sm:text-sm">
