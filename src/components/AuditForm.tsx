@@ -33,13 +33,34 @@ const AuditForm = () => {
       return;
     }
     setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
+    try {
+      await fetch(
+        "https://script.google.com/macros/s/AKfycbzo_SxIr9qq-beTcDSXzrHmfU1LWbzJAWcUMWJNLKpPcFSYXurMZXkiyULYFzZ07BGCAA/exec",
+        {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name: form.name,
+            phone: form.phone,
+            telegram: form.telegram,
+            company: form.company,
+            position: form.position,
+            employees: form.employees,
+            problem: form.problem,
+            date: new Date().toLocaleString("ru-RU"),
+          }),
+        }
+      );
       toast.success("Заявка отправлена! Мы свяжемся с вами в ближайшее время.");
       setForm({ name: "", phone: "", telegram: "", company: "", position: "", employees: "", problem: "" });
       setConsentData(false);
       setConsentAds(false);
-    }, 1200);
+    } catch {
+      toast.error("Ошибка отправки. Попробуйте ещё раз.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const inputClass =
