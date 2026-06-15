@@ -53,9 +53,9 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:flex items-center gap-4">
-          <a href="tel:+79871837315" className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1.5">
+          <a href="tel:+79503120337" className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1.5">
             <Phone className="w-3.5 h-3.5" />
-            +7 (987) 183-73-15
+            8 950 312-03-37
           </a>
           <a href="https://web.telegram.org/k/#@hrinst_bot" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1.5">
             <Send className="w-3.5 h-3.5" />
@@ -94,8 +94,8 @@ const Navbar = () => {
             </button>
           ))}
           <div className="flex flex-col gap-3 mt-4">
-            <a href="tel:+79871837315" className="text-sm text-muted-foreground flex items-center gap-2">
-              <Phone className="w-4 h-4" /> +7 (987) 183-73-15
+            <a href="tel:+79503120337" className="text-sm text-muted-foreground flex items-center gap-2">
+              <Phone className="w-4 h-4" /> 8 950 312-03-37
             </a>
             <a href="https://web.telegram.org/k/#@hrinst_bot" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground flex items-center gap-2">
               <Send className="w-4 h-4" /> Написать в Telegram

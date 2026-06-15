@@ -31,7 +31,7 @@ const Index = () => {
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <span>© {new Date().getFullYear()} HR Инструментарий · Дмитрий Банников</span>
             <div className="flex items-center gap-6">
-              <a href="tel:+79871837315" className="hover:text-foreground transition-colors">+7 (987) 183-73-15</a>
+              <a href="tel:+79503120337" className="hover:text-foreground transition-colors">8 950 312-03-37</a>
               <a href="https://web.telegram.org/k/#@hrinst_bot" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">Telegram</a>
             </div>
           </div>
