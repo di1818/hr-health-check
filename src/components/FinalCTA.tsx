@@ -15,7 +15,7 @@ const FinalCTA = () => (
         onClick={scrollToForm}
         className="px-8 py-4 rounded-xl bg-primary text-primary-foreground font-semibold text-lg hover:opacity-90 transition-opacity glow-hover"
       >
-        Записаться на бесплатный аудит
+        Оставить заявку
       </button>
     </div>
   </section>

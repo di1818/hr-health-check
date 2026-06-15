@@ -77,7 +77,7 @@ const AuditForm = () => {
         >
           <span className="badge-pill mb-6">Заявка</span>
           <h2 className="text-3xl sm:text-5xl font-display font-bold text-foreground mb-5 tracking-tight">
-            Записаться на бесплатный аудит
+            Оставить заявку
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto text-lg">
             Заполните форму — мы свяжемся в течение 24 часов
@@ -119,7 +119,7 @@ const AuditForm = () => {
             disabled={loading}
             className="w-full py-4 rounded-2xl bg-primary text-primary-foreground font-semibold text-lg transition-all duration-300 hover:shadow-[0_0_40px_hsl(38_92%_55%/0.3)] hover:scale-[1.01] disabled:opacity-50 active:scale-[0.99]"
           >
-            {loading ? "Отправка..." : "Записаться на бесплатный аудит"}
+            {loading ? "Отправка..." : "Оставить заявку"}
           </button>
           <div className="space-y-3 mt-6">
             <label className="flex items-start gap-3 cursor-pointer group">

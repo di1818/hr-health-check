@@ -39,7 +39,7 @@ const HeroSection = () => (
             onClick={scrollToForm}
             className="group relative px-8 py-4 rounded-2xl bg-primary text-primary-foreground font-semibold text-lg transition-all duration-300 hover:shadow-[0_0_40px_hsl(38_92%_55%/0.3)] hover:scale-[1.02] active:scale-[0.98]"
           >
-            Записаться на бесплатный аудит
+            Оставить заявку
             <span className="absolute inset-0 rounded-2xl bg-primary/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity -z-10" />
           </button>
         </motion.div>
