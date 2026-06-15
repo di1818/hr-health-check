@@ -6,10 +6,10 @@ const FinalCTA = () => (
   <section className="py-20 sm:py-28 border-t border-border">
     <div className="section-container text-center">
       <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-4">
-        Узнайте, где ваш HR теряет эффективность
+        Готовы навести порядок в HR?
       </h2>
       <p className="text-muted-foreground mb-8 max-w-lg mx-auto">
-        Бесплатно. Без обязательств. Запись открыта ограниченное время.
+        Выберите формат — аудит, трекерство или курс. Поможем подобрать подходящий вариант.
       </p>
       <button
         onClick={scrollToForm}

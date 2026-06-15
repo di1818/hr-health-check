@@ -2,10 +2,10 @@ import { useState, useEffect } from "react";
 import { Phone, Send } from "lucide-react";
 
 const navItems = [
-  { label: "Что вы получите", href: "#benefits" },
+  { label: "Услуги", href: "#services" },
   { label: "Кому подходит", href: "#audience" },
+  { label: "Что входит", href: "#benefits" },
   { label: "Как проходит", href: "#steps" },
-  { label: "О нас", href: "#trust" },
   { label: "FAQ", href: "#faq" },
 ];
 
