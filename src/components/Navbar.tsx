@@ -5,7 +5,7 @@ const navItems = [
   { label: "Услуги", href: "#services" },
   { label: "Кому подходит", href: "#audience" },
   { label: "Что входит", href: "#benefits" },
-  { label: "Как проходит", href: "#steps" },
+  
   { label: "FAQ", href: "#faq" },
 ];
 
