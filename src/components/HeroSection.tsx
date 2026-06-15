@@ -19,7 +19,7 @@ const HeroSection = () => (
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-display font-bold leading-[1.1] mb-8 text-foreground tracking-tight">
-            HR-инструментарий
+            HR — инструментарий
           </h1>
 
           <p className="text-lg sm:text-xl text-muted-foreground mb-4 leading-relaxed">
@@ -28,7 +28,7 @@ const HeroSection = () => (
           </p>
 
           <p className="text-muted-foreground mb-12 font-medium">
-            Три формата работы под задачи вашей компании
+            <br />
           </p>
 
           <div className="flex flex-wrap gap-4">
