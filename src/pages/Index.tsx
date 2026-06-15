@@ -1,14 +1,14 @@
 import AmbientBackground from "@/components/AmbientBackground";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
+import ServicesSection from "@/components/ServicesSection";
 import BenefitsSection from "@/components/BenefitsSection";
 import AudienceSection from "@/components/AudienceSection";
 import ProblemsSection from "@/components/ProblemsSection";
 import StepsSection from "@/components/StepsSection";
-import WhyFreeSection from "@/components/WhyFreeSection";
-import AfterAuditSection from "@/components/AfterAuditSection";
 import TrustSection from "@/components/TrustSection";
 import FAQSection from "@/components/FAQSection";
+import FinalCTA from "@/components/FinalCTA";
 import AuditForm from "@/components/AuditForm";
 
 const Index = () => {
@@ -17,14 +17,14 @@ const Index = () => {
       <AmbientBackground />
       <Navbar />
       <HeroSection />
-      <BenefitsSection />
-      <AudienceSection />
+      <ServicesSection />
       <ProblemsSection />
+      <AudienceSection />
+      <BenefitsSection />
       <StepsSection />
-      <WhyFreeSection />
-      <AfterAuditSection />
       <TrustSection />
       <FAQSection />
+      <FinalCTA />
       <AuditForm />
       <footer className="py-12 section-divider text-sm text-muted-foreground">
         <div className="section-container flex flex-col gap-6">

@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
-import CountdownTimer from "./CountdownTimer";
 
-const scrollToForm = () => {
-  document.getElementById("audit-form")?.scrollIntoView({ behavior: "smooth" });
+const scrollTo = (id: string) => {
+  document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 };
 
 const HeroSection = () => (
@@ -16,55 +15,75 @@ const HeroSection = () => (
         >
           <div className="badge-pill mb-8">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse-glow" />
-            Запись открыта — осталось ограниченное время
+            HR-инструменты для роста компании
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-display font-bold leading-[1.1] mb-8 text-foreground tracking-tight">
-            Бесплатный{" "}
-            <span className="gradient-text">HR-аудит</span>
+            Аудит, трекерство и{" "}
+            <span className="gradient-text">курс</span>
             <br />
-            и консультация для компаний
+            по HR-инструментарию
           </h1>
 
           <p className="text-lg sm:text-xl text-muted-foreground mb-4 leading-relaxed">
-            Покажем, где у вас теряются люди, время и деньги. Найдём узкие места.
-            Честно скажем, нужен ли вам курс вообще.
+            Помогаем собственникам и HR-командам выстроить найм, адаптацию и удержание.
+            Покажем, где теряются люди, время и деньги — и доведём до результата.
           </p>
 
           <p className="text-muted-foreground mb-12 font-medium">
-            Без оплаты · Без обязательства покупки
+            Три формата работы под задачи вашей компании
           </p>
 
-          <button
-            onClick={scrollToForm}
-            className="group relative px-8 py-4 rounded-2xl bg-primary text-primary-foreground font-semibold text-lg transition-all duration-300 hover:shadow-[0_0_40px_hsl(38_92%_55%/0.3)] hover:scale-[1.02] active:scale-[0.98]"
-          >
-            Оставить заявку
-            <span className="absolute inset-0 rounded-2xl bg-primary/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity -z-10" />
-          </button>
+          <div className="flex flex-wrap gap-4">
+            <button
+              onClick={() => scrollTo("services")}
+              className="group relative px-8 py-4 rounded-2xl bg-primary text-primary-foreground font-semibold text-lg transition-all duration-300 hover:shadow-[0_0_40px_hsl(38_92%_55%/0.3)] hover:scale-[1.02] active:scale-[0.98]"
+            >
+              Смотреть услуги
+              <span className="absolute inset-0 rounded-2xl bg-primary/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity -z-10" />
+            </button>
+            <button
+              onClick={() => scrollTo("audit-form")}
+              className="px-8 py-4 rounded-2xl border border-border bg-background/30 backdrop-blur text-foreground font-semibold text-lg transition-all duration-300 hover:bg-background/60 hover:scale-[1.02] active:scale-[0.98]"
+            >
+              Оставить заявку
+            </button>
+          </div>
         </motion.div>
 
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-          className="hidden lg:flex flex-col items-center gap-6"
+          className="hidden lg:flex flex-col gap-4"
         >
-          <p className="text-sm text-muted-foreground tracking-wide uppercase font-medium">Запись закроется через:</p>
-          <CountdownTimer />
+          {[
+            { title: "Аудит", desc: "Разовая диагностика и отчёт с рекомендациями", price: "20–50 тыс ₽" },
+            { title: "Трекерство", desc: "Сопровождение компании экспертом до результата", price: "от 200 тыс ₽" },
+            { title: "Курс «HR Инструментарий»", desc: "Готовая система найма и удержания", price: "60 тыс ₽", old: "120 тыс ₽" },
+          ].map((s, i) => (
+            <motion.button
+              key={s.title}
+              onClick={() => scrollTo("services")}
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 + i * 0.1 }}
+              className="card-glass p-5 text-left glow-hover group"
+            >
+              <div className="flex items-center justify-between gap-4">
+                <div>
+                  <h3 className="font-display font-semibold text-foreground tracking-tight mb-1">{s.title}</h3>
+                  <p className="text-sm text-muted-foreground">{s.desc}</p>
+                </div>
+                <div className="text-right flex-shrink-0">
+                  {s.old && <div className="text-xs text-muted-foreground line-through">{s.old}</div>}
+                  <div className="text-sm font-semibold text-foreground">{s.price}</div>
+                </div>
+              </div>
+            </motion.button>
+          ))}
         </motion.div>
       </div>
-
-      {/* Mobile countdown */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.4 }}
-        className="lg:hidden mt-16"
-      >
-        <p className="text-sm text-muted-foreground mb-4 tracking-wide uppercase font-medium">Запись закроется через:</p>
-        <CountdownTimer />
-      </motion.div>
     </div>
   </section>
 );
